@@ -1,0 +1,319 @@
+/* pages/rank/rank.wxss */
+.container {
+  padding: 20rpx;
+} 
+.img-a {
+	position: absolute;
+	width: 100%;
+	top: -185rpx;
+  right: 0;
+  z-index: -1; /* 将图片置于底层 */
+}
+
+.img-b {
+	position: absolute;
+	width: 50%;
+	bottom: 0;
+  left: -50rpx;
+  z-index: -1; /* 将图片置于底层 */
+}
+
+.img-c {
+	position: absolute;
+	width: 50%;
+	bottom: -1000rpx;
+  right: -120rpx;
+  transform: scaleY(-1);
+  z-index: -1; /* 将图片置于底层 */
+}
+.img-d {
+	position: absolute;
+	width: 50%;
+	bottom: -1000rpx;
+  left: -300rpx;
+  transform: scaleY(-1);
+  transform: scaleX(-1);
+  z-index: -1; /* 将图片置于底层 */
+}
+
+
+.picker {
+  display: flex;
+  align-items: center; /* 使字体垂直居中 */
+  justify-content: space-between; /* 使字体在水平方向上均匀分布 */
+  padding: 20rpx;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  background-color: #f9f9f9; /* 添加背景颜色 */
+  border-radius: 8px; /* 添加边框圆角 */
+  box-shadow: 0 2px 4px rgba(12, 12, 12, 0.1); /* 添加阴影效果 */
+  width: 650rpx; /* 盒子宽度 */
+  font-weight: bold;
+  position: relative; /* 固定定位 */
+  margin-top: 0;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+.picker::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black; /* 小三角形 */
+}
+
+.score-list-scroll{
+  margin-top: 4vh;
+  border: 1px solid #eee; /* 可选，为scroll-view添加边框 */
+  border-radius: 8px; /* 添加边框圆角 */
+  box-shadow: 0 2px 4px rgba(12, 12, 12, 0.1); /* 添加阴影效果 */
+  width: 95vw;
+}
+
+.score-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  /* background-color: #f0f0f0; */
+  font-weight: bold;
+  margin-top: 2vh;
+}
+
+.score-header:last-child {
+  border-bottom: none;
+}
+
+.score-header text {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1vw;
+}
+
+/* Additional styles to enhance readability and aesthetics */
+.score-header text:nth-child(2) {
+  font-weight: bold; 
+  align-items: center;
+  justify-content: center;
+  margin-left: 19vw;
+  margin-right: 3vw;
+}
+
+.score-header text:nth-child(3) {
+  font-weight: bold; 
+  align-items: center;
+  justify-content: center;
+  margin-left: 17vw;
+}
+
+.score-item2 {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  background-color: #EDEFFE; /* 添加背景颜色 */
+  border-radius: 28px; /* 添加边框圆角 */
+  box-shadow: 0 2px 4px rgba(8, 8, 8, 0.1); /* 添加阴影效果 */
+  width: 80vw; /* 盒子占满页面 */
+  margin-top: 2vw; /* 添加下边距 */
+  /* margin-left: 5vw; */
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+.score-item2 text {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6vw;
+  margin-right: auto;
+}
+
+/* Additional styles to enhance readability and aesthetics */
+.score-item2 text:nth-child(2) {
+  font-weight: bold; 
+  align-items: center;
+  justify-content: center;
+  margin-left: 13vw;
+  margin-right: auto;
+}
+
+.score-item2 text:nth-child(3) {
+  color: #888; 
+  align-items: center;
+  justify-content: center;
+  margin-left: 13vw;
+  margin-right: auto;
+}
+
+
+.score-item {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  background-color: #f9f9f9; /* 添加背景颜色 */
+  border-radius: 28px; /* 添加边框圆角 */
+  box-shadow: 0 2px 4px rgba(8, 8, 8, 0.1); /* 添加阴影效果 */
+  width: 80vw; /* 盒子占满页面 */
+  margin-top: 2vw; /* 添加下边距 */
+  /* margin-left: 5vw; */
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+/* .score-item:last-child {
+  margin-bottom: 2rpx;
+} */
+
+.score-item text {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6vw;
+  margin-right: auto;
+}
+
+/* Additional styles to enhance readability and aesthetics */
+.score-item text:nth-child(2) {
+  font-weight: bold; 
+  align-items: center;
+  justify-content: center;
+  margin-left: 13vw;
+  margin-right: auto;
+}
+
+.score-item text:nth-child(3) {
+  color: #888; 
+  align-items: center;
+  justify-content: center;
+  margin-left: 13vw;
+  margin-right: auto;
+}
+
+
+/*  */
+/* pages/score/score.wxss */
+.modal {
+  position: relative; /* 添加相对定位 */
+  width: 65%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* 背景模糊化 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 65%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.modal-divider {
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.modal-content {
+  display: flex;
+  font-size: 16px;
+  white-space: pre-wrap; /* 允许换行 */
+}
+
+
+.detail-item {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 10px; */
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between; /* 使字体在水平方向上均匀分布 */
+}
+.detail-item text {
+  margin-top: 10px; /* 增加行间距 */
+}
+
+.detail-key {
+  width: 100px; /* 调整为合适的宽度 */
+  /* font-weight: bold; */
+}
+
+.detail-value {
+  flex: 1;
+  text-align: right;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 23px;
+  height: 23px;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: rgb(223, 220, 220); /* 按钮背景颜色 */
+  border-radius: 50%; /* 边界改为圆形 */
+  border: none;
+  outline: none;
+  color: #fff; /* × 的颜色改为白色 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease; /* 添加过渡效果 */
+}
+
+.bar-container {
+  width: 200px;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+
+.rank-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  font-size: 12px;
+  color: #333;
+}

@@ -1,0 +1,23 @@
+<view class="t-login">
+    <!-- 页面装饰图片 -->
+    <image class="img-a" src="/img/LOGIN/background2.png"></image>
+    <image class="img-b" src="/img/LOGIN/background3.png"></image>
+    <!-- 标题 -->
+    <view class="t-b">2024小游戏</view>
+    <view class="t-b2">欢迎登录，祝您玩耍愉快(●'◡'●)</view>
+    <form class="cl">
+      <view class="t-a">
+            <image src="/img/LOGIN/name.png"></image>
+            <view class="line"></view>
+            <input type="text" placeholder="请输入学号" bindinput="bindInputChange" data-field="sidNumber"/>
+        </view>
+        <view class="t-a">
+            <image src="/img/LOGIN/yz.png"></image>
+            <view class="line"></view>
+            <input type="password" placeholder="请输入密码" bindinput="bindInputChange" data-field="password"/>
+        </view>
+        <button class="login-button" bindtap="onLogin">立即登录</button>
+    </form>
+</view>
+<!-- <view><button class="yinsi" bindtap="yinsi">登录即代表您同意《AIWorkingPlatform隐私政策》</button></view> -->
+

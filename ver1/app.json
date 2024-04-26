@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/2048/2048",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/personInfo/personInfo",
+    "pages/rank/rank"
+  ],
+  "tabBar": {
+    "list":[
+      {
+        "pagePath": "pages/2048/2048",
+        "text": "首页",
+        "iconPath": "/img/tab/home1.png",
+        "selectedIconPath": "/img/tab/home2.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "榜单",
+        "iconPath": "/img/tab/rank1.png",
+        "selectedIconPath": "/img/tab/rank2.png"
+      },
+      {
+        "pagePath": "pages/personInfo/personInfo",
+        "text": "个人",
+        "iconPath": "/img/tab/me1.png",
+        "selectedIconPath": "/img/tab/me2.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#BBADA0",
+    "navigationBarTitleText": "2048小游戏",
+    "navigationBarTextStyle":"black"
+  }
+}

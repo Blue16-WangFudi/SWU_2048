@@ -1,0 +1,33 @@
+<!-- pages/personInfo/personInfo.wxml -->
+<view class="profile-container">
+  <view class="profile-header">
+    <view class="profile-avatar-container">
+      <image class="profile-avatar" src="{{memberInfo.pic}}" mode="aspectFill"></image>
+    </view>
+    <view class="divider"></view> <!-- 添加这个元素作为分隔线 -->
+    <view class="profile-info-container">
+      <text class="function-name">{{memberInfo.name}}</text>
+      <!-- <text class="info-item">性别：{{memberInfo.gender == 0 ? '男' : '女'}}</text> -->
+      <text class="info-item">学院：{{memberInfo.college}}</text>
+      <text class="info-item">班级：{{memberInfo.className}}</text>
+      <text class="info-item">学号：{{memberInfo.sidNumber}}</text>
+    </view>
+  </view>
+  <view class="function-area">
+    <!-- 示例功能项，你可以根据需要复制多个相似的结构 -->
+    <view class="function-item" bindtap="handleChangePasswordClick">
+      <text class="function-label">🙂</text>
+      <text class="function-value">修改密码</text>
+    </view>
+    <view class="function-item" bindtap="handleLogoutClick">
+      <text class="function-label">😨</text>
+      <text class="function-value">退出登陆</text>
+    </view>
+    <!-- <checkbox-group bindchange="agreePrivacy">
+          <label>
+            <checkbox value="nomal" />困难模式
+          </label>
+    </checkbox-group> -->
+    <!-- ... 添加更多功能项 ... -->
+  </view>
+</view>

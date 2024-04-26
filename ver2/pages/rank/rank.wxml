@@ -1,0 +1,40 @@
+<!--pages/rank/rank.wxml-->
+<view class='container'> 
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+      模式：{{modes[multiIndex[0]]}} | 类型：{{types[multiIndex[1]]}} | 范围：{{scopes[multiIndex[2]]}}
+    </view>
+  </picker>
+  <view class="score-list">
+    <view class="score-header">
+    <text>名称</text>
+    <text>成绩</text>
+    <text>类型</text>
+    </view>
+    <view class="t-g"><text>————— 点击可查看详情👇 —————</text></view>
+    <block wx:for="{{scoreList}}" wx:key="index">
+      <view class="score-item" bindtap="showCourseDetail" data-index="{{index}}">
+        <text>{{item.name}}</text>
+        <text>{{item.score}}</text>
+        <text>{{item.rank}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view wx:if="{{showModal}}" class="modal-bg">
+  <view class="modal">
+    <view class="modal-title">{{selectedCourse}}</view>
+    <view class="modal-divider"></view>
+    <view class="modal-content">
+      <block wx:for="{{courseDetail}}" wx:key="index">
+        <view class="detail-item">
+          <text class="detail-key">{{item.key}}：</text>
+          <text class="detail-value">{{item.value}}</text>
+        </view>
+      </block>
+    </view>
+    <view class="modal-close" bindtap="closeModal">✕</view>
+  </view>
+</view>
+
+</view>

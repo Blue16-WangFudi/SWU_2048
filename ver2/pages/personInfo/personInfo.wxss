@@ -1,0 +1,106 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+  height: 100vh;
+  
+}
+
+.profile-header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30rpx;
+  align-items: center;
+}
+
+.profile-avatar-container {
+  flex: none;
+  padding: 20rpx;
+  width: 260rpx; /* 设置头像容器尺寸 */
+  height: 350rpx;
+  border-radius: 22%;
+  overflow: hidden; /* 防止图片溢出容器 */
+}
+
+.profile-avatar {
+  width: 100%; /* 完整填充容器 */
+  height: 100%;
+}
+
+.profile-info-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20rpx;
+
+}
+
+.function-name {
+  font-weight: bold;
+  font-size: 45rpx;
+  margin-bottom: 25rpx;
+}
+
+.info-item {
+  font-size: 29rpx;
+  margin-bottom: 20rpx;
+}
+
+.function-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.15);
+  border-radius: 15rpx;
+  padding: 30rpx;
+  margin-top: 20rpx;
+}
+
+.function-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15rpx;
+  width: 100%;
+  padding-bottom: 15rpx; /* 添加内边距以与边框分离 */
+  border-bottom: 1rpx solid #e0e0e0; /* 添加底部边框线 */
+}
+
+/* 最后一个功能项不需要底部边框 */
+.function-item:last-child {
+  border-bottom: none;
+}
+
+.divider {
+  width: 5rpx; /* 分隔线的宽度 */
+  height: 90%; /* 分隔线的高度，占满容器高度 */
+  background-color: #e0e0e0; /* 分隔线的颜色 */
+  margin: 0 20rpx; /* 在分隔线两侧添加一些空间 */
+  align-items: center;
+}
+
+
+checkbox-group {
+  position: relative; /* 设置定位，确保z-index生效 */
+  z-index: 2; /* 设置层级，确保位于顶层 */
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* 在复选框和按钮之间添加一些空间 */
+  margin-left: 20px;
+}
+
+checkbox {
+  transform: scale(0.6); /* 调整复选框的大小 */
+}
+
+label {
+  font-size: 14px; /* 设置标签文字的大小 */
+  color: #757575; /* 设置标签文字的颜色 */
+}

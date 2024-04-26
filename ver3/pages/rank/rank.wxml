@@ -1,0 +1,52 @@
+<!--pages/rank/rank.wxml-->
+<view class='container'>
+  <image class="img-a" src="/img/LOGIN/background2.png"></image>
+  <image class="img-b" src="/img/LOGIN/background3.png"></image>
+  <!-- <image class="img-c" src="/img/LOGIN/background2.png"></image>
+  <image class="img-d" src="/img/LOGIN/background2.png"></image> -->
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker" >
+      模式：{{modes[multiIndex[0]]}} | 类型：{{types[multiIndex[1]]}} | 范围：{{scopes[multiIndex[2]]}}
+    </view>
+  </picker>
+  <view class="score-header">
+  <text>姓名</text>
+  <text>成绩</text>
+  <text>排名</text>
+  </view>
+  <view class="t-g"><text>————— 点击可查看详情👇 —————</text></view>
+  <scroll-view class="score-list-scroll" scroll-y="true" style="height: 72vh;">
+      <view class="score-item2">
+          <text>{{studentInfo.name}}</text>
+          <text wx:if="{{typeindex === 0}}">{{552}}</text>
+          <text wx:if="{{typeindex === 1}}">{{4}}</text>
+          <text>{{4}}</text>
+      </view>
+      <block wx:for="{{scoreList}}" wx:key="index">
+        <view class="score-item" bindtap="showDetail" data-index="{{index}}">
+          <text>{{item.name}}</text>
+          <text wx:if="{{typeindex === 0}}">{{item.topMark}}</text>
+          <text wx:if="{{typeindex === 1}}">{{item.totalMark}}</text>
+          <text>{{index+1}}</text>
+        </view>
+      </block>
+  </scroll-view>
+
+  <view wx:if="{{showModal}}" class="modal-bg">
+  <view class="modal">
+    <view class="modal-title">{{detailname}}</view>
+    <view class="modal-divider"></view>
+    <view class="modal-content">
+      <block wx:for="{{detail}}" wx:key="index">
+        <view class="detail-item">
+          <text>学院：{{item.college}}</text>
+          <text>班级：{{item.className}}</text>
+          <text>学号：{{item.sidNumber}}</text>
+        </view>
+      </block>
+    </view>
+    <view class="modal-close" bindtap="closeModal">✕</view>
+  </view>
+</view>
+
+</view>

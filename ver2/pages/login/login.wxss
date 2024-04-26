@@ -1,0 +1,240 @@
+/* pages/login/login.wxss
+
+.container {
+  padding: 20rpx;
+}
+
+.input-group {
+  margin-bottom: 20rpx;
+}
+
+.label {
+  display: inline-block;
+  width: 200rpx;
+  text-align: left;
+  margin-right: 20rpx;
+}
+
+input {
+  width: 400rpx;
+  height: 60rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 8rpx;
+  padding: 10rpx;
+  font-size: 28rpx;
+}
+
+button {
+  width: 100%;
+  height: 80rpx;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8rpx;
+  cursor: pointer;
+  font-size: 32rpx;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+.captcha-btn {
+  width: 200rpx;
+  margin-left: auto;
+  background-color: #009688;
+}
+
+.captcha-btn:disabled {
+  background-color: #ccc;
+} */
+
+
+/* 美化 */
+/* 登录按钮居中 */
+.login-button {
+  font-size: 28rpx;
+  background-color: #9c8cf7;
+  color: #fff;
+  width: 200rpx; /* 设置按钮宽度 */
+  height: 80rpx; /* 设置按钮高度 */
+  display: flex; /* 使用 Flexbox 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  border: none;
+  border-radius: 50rpx;
+  margin: 20rpx auto; /* 调整按钮间距，并使按钮水平居中 */
+  text-align: center; /* 文字居中 */
+  
+}
+
+
+.yinsi {
+  border: none;
+  background-color: transparent;
+  color: #69696d;
+  outline: none;
+  cursor: pointer;
+  font-size: 17rpx;
+  /* white-space: nowrap; */
+  text-decoration: underline;
+}
+
+
+
+
+/* 注册按钮样式 */
+.register-button {
+  font-size: 28rpx;
+  background-color: #9c8cf7;
+  color: #fff;
+  width: 200rpx; /* 设置按钮宽度 */
+  height: 80rpx; /* 设置按钮高度 */
+  display: flex; /* 使用 Flexbox 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  border: none;
+  border-radius: 50rpx;
+  margin: 20rpx auto; /* 调整按钮间距，并使按钮水平居中 */
+  text-align: center; /* 文字居中 */
+  margin-top: 20rpx; /* 调整与登录按钮的间距 */
+}
+
+.img-a {
+	position: absolute;
+	width: 100%;
+	top: -185rpx;
+	right: 0;
+}
+
+.img-b {
+	position: absolute;
+	width: 50%;
+	bottom: 0;
+	left: -50rpx;
+}
+
+.t-login {
+	width: 650rpx;
+	margin: 0 auto;
+	font-size: 28rpx;
+	color: #000;
+}
+
+.t-login button {
+	font-size: 28rpx;
+	background: #C6CEFC;
+	color: #fff;
+	height: 90rpx;
+	line-height: 90rpx;
+	border-radius: 50rpx;
+	box-shadow: 0 5px 7px 0 rgba(86, 119, 252, 0.2);
+}
+
+.t-login input {
+	padding: 0 20rpx 0 120rpx;
+	height: 90rpx;
+	line-height: 90rpx;
+	margin-bottom: 50rpx;
+	background: #f8f7fc;
+	border: 1px solid #e9e9e9;
+	font-size: 28rpx;
+	border-radius: 50rpx;
+}
+
+.t-login .t-a {
+	position: relative;
+}
+
+.t-login .t-a image {
+	width: 40rpx;
+	height: 40rpx;
+	position: absolute;
+	left: 40rpx;
+	top: 28rpx;
+	margin-right: 20rpx;
+}
+
+.t-login .t-a .line {
+	width: 2rpx;
+	height: 40rpx;
+	background-color: #dedede;
+	position: absolute;
+	top: 28rpx;
+	left: 98rpx;
+}
+
+.t-login .t-b {
+	text-align: left;
+	font-size: 46rpx;
+	color: #000;
+	padding: 200rpx 0 30rpx 0;
+	font-weight: bold;
+}
+
+.t-login .t-b2 {
+	text-align: left;
+	font-size: 32rpx;
+	color: #aaaaaa;
+	padding: 0rpx 0 120rpx 0;
+}
+.t-login .t-c {
+	position: absolute;
+	right: 22rpx;
+	top: 22rpx;
+	background: #C6CEFC;
+	color: #fff;
+	font-size: 24rpx;
+	border-radius: 50rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+  padding: 0 25rpx;
+  z-index: 2; /* 确保按钮在输入框上方显示 */
+}
+
+.t-login .t-d {
+	text-align: center;
+	color: #999;
+	margin: 80rpx 0;
+}
+
+.t-login .t-e {
+	text-align: center;
+	width: 250rpx;
+	margin: 80rpx auto 0;
+}
+
+.t-login .t-g {
+	float: left;
+	width: 50%;
+}
+
+.t-login .t-e image {
+	width: 50rpx;
+	height: 50rpx;
+}
+
+.t-login .t-f {
+	text-align: center;
+	margin: 200rpx 0 0 0;
+	color: #666;
+}
+
+.t-login .t-f text {
+	margin-left: 20rpx;
+	color: #aaaaaa;
+	font-size: 27rpx;
+}
+
+.t-login .uni-input-placeholder {
+	color: #000;
+}
+
+.cl:after {
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+	content: '\20';
+}
+
